@@ -1,9 +1,15 @@
-def READ(x: str) -> str:
-    return x
+from . import parser
 
 
-def EVAL(x: str, env: dict) -> str:
-    return x
+parser_ = parser.Parser()
+
+
+def READ(x: str) -> list[str]:
+    return parser_.read(x)
+
+
+def EVAL(x: list[str], env: dict) -> str:
+    return str(x)
 
 
 def PRINT(x: str) -> str:

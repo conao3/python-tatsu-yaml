@@ -21,7 +21,7 @@ def repl() -> None:
     while True:
         try:
             inpt = input("tatsuyaml> ")
-            readline.write_history_file(history_file)
+            readline.add_history(inpt)
         except EOFError:
             break
 
