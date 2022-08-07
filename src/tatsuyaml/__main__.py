@@ -1,1 +1,3 @@
-print('hello')
+from . import cli
+
+cli.main()

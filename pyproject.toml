@@ -16,6 +16,9 @@ dependencies = [
 ]
 dynamic = ["version"]
 
+[project.scripts]
+tatsuyaml = "tatsuyaml.cli:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest",
