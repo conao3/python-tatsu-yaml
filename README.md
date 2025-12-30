@@ -1,26 +1,56 @@
-# python-tatsu-yaml
+# tatsuyaml
 
-YAML parser powered by TatSu.
+A YAML parser built with [TatSu](https://github.com/neogeny/TatSu), a Python library for parsing expression grammars.
 
-# Usage
+## Features
 
-Install `tatsuyaml` in local Python.
+- Parse YAML content using TatSu's PEG parser
+- Interactive REPL with command history
+- File-based parsing via CLI
 
-```sh
+## Requirements
+
+- Python 3.10
+
+## Installation
+
+```bash
+pip install tatsuyaml
+```
+
+### Development Setup
+
+Clone the repository and install in editable mode:
+
+```bash
+git clone https://github.com/conao3/python-tatsu-yaml.git
+cd python-tatsu-yaml
+
 python -m venv .venv
-. .venv/bin/activate
+source .venv/bin/activate
 pip install -e .[dev]
 ```
 
-Then, you could run `tatsuyaml`.
+## Usage
 
-```sh
-$(.venv) tatsuyaml
-cli.py: hello
+### Interactive REPL
+
+Start the interactive REPL by running:
+
+```bash
+tatsuyaml
 ```
 
-And you want to leave this virtualenv, execute below command.
+This opens a prompt where you can enter YAML content and see the parsed output. Command history is saved to `~/.tatsuyaml_history`.
 
-```sh
-$ deactivate
+### Parse a File
+
+Parse a YAML file directly:
+
+```bash
+tatsuyaml -i path/to/file.yaml
 ```
+
+## License
+
+See [LICENSE](LICENSE) for details.
